@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joc cu Punctaj</title>
+</head>
+<body>
+    <h1>Întrebare 1</h1>
+    <p>Care este cel mai mare deșert din lume?</p>
+
+    <!-- Butoane pentru răspuns -->
+    <button onclick="submitAnswer(10)">Sahara</button>
+    <button onclick="submitAnswer(0)">Gobi</button>
+    <button onclick="submitAnswer(0)">Atacama</button>
+    <button onclick="submitAnswer(0)">Kalahari</button>
+
+    <p id="scoreMessage"></p>
+
+    <script>
+        // Functie pentru salvarea punctajului in Local Storage
+        function submitAnswer(points) {
+            // Obține punctajul curent din local storage sau inițializează-l cu 0
+            let totalScore = localStorage.getItem('totalScore');
+            if (!totalScore) {
+                totalScore = 0;
+            }
+            totalScore = parseInt(totalScore);
+
+            // Adaugă punctajul întrebării la scorul total
+            totalScore += points;
+
+            // Salvează scorul actualizat în local storage
+            localStorage.setItem('totalScore', totalScore);
+
+            // Afișează un mesaj cu scorul curent
+            document.getElementById('scoreMessage').textContent = "Punctaj total: " + totalScore;
+
+            // Poți face redirect către următoarea întrebare aici
+            // window.location.href = 'next-question.html';
+        }
+
+        // La încărcarea paginii, afișează scorul curent
+        window.onload = function() {
+            let totalScore = localStorage.getItem('totalScore');
+            if (!totalScore) {
+                totalScore = 0;
+            }
+            document.getElementById('scoreMessage').textContent = "Punctaj total: " + totalScore;
+        };
+    </script>
+</body>
+</html>
