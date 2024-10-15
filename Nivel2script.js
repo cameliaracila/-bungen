@@ -4,7 +4,7 @@ function checkAnswer2() {
     if (userAnswer.toLowerCase() == correctAnswer.toLowerCase()) 
         {   
         saveScore(10);
-        window.open('spike.png', '_blank');
+        window.open('Peely.png', '_blank');
         window.location.href = "Nivel3.html";
         } 
     else {
