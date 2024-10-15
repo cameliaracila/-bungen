@@ -67,7 +67,7 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
-window.onload = function () {
+window1.onload = function () {
     const timerDisplay = document.getElementById('timer');
     const timeInMinutes = 5;  // Setează numărul de minute pentru timer
     const timeInSeconds = timeInMinutes * 60;
