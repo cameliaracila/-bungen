@@ -32,13 +32,7 @@ function saveScore(score) {
     sessionStorage.setItem('totalScore', totalScore);
     
 }
-window.onload = function() {
-    let totalScore = sessionStorage.getItem('totalScore');
-    if (!totalScore) {
-        totalScore = 0;
-    }
-    document.getElementById('message').textContent = "Punctaj total până acum: " + totalScore;
-};
+
 function startTimer(duration, display) {
     let timer = duration, minutes, seconds;
 
@@ -67,7 +61,12 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
-window1.onload = function () {
+window.onload = function () {
+    let totalScore = sessionStorage.getItem('totalScore');
+    if (!totalScore) {
+        totalScore = 0;
+    }
+    document.getElementById('message').textContent = "Punctaj total până acum: " + totalScore;
     const timerDisplay = document.getElementById('timer');
     const timeInMinutes = 5;  // Setează numărul de minute pentru timer
     const timeInSeconds = timeInMinutes * 60;
