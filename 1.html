@@ -1,53 +1,40 @@
 <!DOCTYPE html>
 <html lang="ro">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joc cu Punctaj</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Planeta Desertului - Salvează-l pe Spike</title>
+        <link rel="stylesheet" href="pagina1.css">
+    </head>
 <body>
-    <h1>Întrebare 1</h1>
-    <p>Care este cel mai mare deșert din lume?</p>
-
-    <!-- Butoane pentru răspuns -->
-    <button onclick="submitAnswer(10)">Sahara</button>
-    <button onclick="submitAnswer(0)">Gobi</button>
-    <button onclick="submitAnswer(0)">Atacama</button>
-    <button onclick="submitAnswer(0)">Kalahari</button>
-
-    <p id="scoreMessage"></p>
-
+    <h1>Befreie deine Helden!</h1>
+    <p> <span class="highlight">
+        Wir schreiben das Jahr 2093. Die Gamingwelt hat einen grossen Wandel durchgemacht. 
+        Auf der ganzen Welt wird und darf nur noch ein Game gespielt werden. 
+        Der Konzern GamingSTAR hat vor dreissig Jahren alle Games aufgekauft und nun ein Monopol in der Welt der Gamer. 
+        Mit seinem Spiel RisingSTAR hat es einen Welterfolg gehabt.
+    
+    
+        
+    
+        Alle Games, die bis anhin begeistert von Kindern und Erwachsenen gespielt wurden, sind verschwunden. 
+        Fortnite, Mario Brothers, Brawl Stars, Minecraft, FiFA, Roblox, Clash of Clans- sie alle gibt es nicht mehr. 
+        Damien Star, der Gründer von GamingSTAR, hat alle bekannten Figuren der Games ins virtuelle Nirwana geschickt und sie in virtuellen Räumen auf ewig gefangen. 
+        Nur ihr könnt eure Stars retten. Klamix- euer virtueller Freund- belgeitet euch bei der Befreiung der Gamingstars.
+    </span>
+    <div class="nextpage">
+        <button onclick="nextpage()">Überprüfen</button>
+        <div class="message" id="message"></div>
+    </div>
     <script>
-        // Functie pentru salvarea punctajului in Local Storage
-        function submitAnswer(points) {
-            // Obține punctajul curent din local storage sau inițializează-l cu 0
-            let totalScore = localStorage.getItem('totalScore');
-            if (!totalScore) {
-                totalScore = 0;
-            }
-            totalScore = parseInt(totalScore);
-
-            // Adaugă punctajul întrebării la scorul total
-            totalScore += points;
-
-            // Salvează scorul actualizat în local storage
-            localStorage.setItem('totalScore', totalScore);
-
-            // Afișează un mesaj cu scorul curent
-            document.getElementById('scoreMessage').textContent = "Punctaj total: " + totalScore;
-
-            // Poți face redirect către următoarea întrebare aici
-            // window.location.href = 'next-question.html';
+        function nextpage(){
+            window.location.href = "Nivel1.html";
         }
-
-        // La încărcarea paginii, afișează scorul curent
-        window.onload = function() {
-            let totalScore = localStorage.getItem('totalScore');
-            if (!totalScore) {
-                totalScore = 0;
-            }
-            document.getElementById('scoreMessage').textContent = "Punctaj total: " + totalScore;
-        };
     </script>
+
+   
+
+
+   
 </body>
 </html>
