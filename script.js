@@ -24,16 +24,16 @@ function checkAnswers() {
     }
 }
 function saveScore(score) {
-    let totalScore = localStorage.getItem('totalScore');
+    let totalScore = sessionStorage.getItem('totalScore');
     if (!totalScore) {
         totalScore = 0;
     }
     totalScore = parseInt(totalScore) + score;
-    localStorage.setItem('totalScore', totalScore);
+    sessionStorage.setItem('totalScore', totalScore);
     
 }
 window.onload = function() {
-    let totalScore = localStorage.getItem('totalScore');
+    let totalScore = sessionStorage.getItem('totalScore');
     if (!totalScore) {
         totalScore = 0;
     }
