@@ -19,8 +19,8 @@ function checkAnswers() {
         window.location.href = "Nivel2.html";
         
     } else {
+        alert('`Du brauchst mindestens 5 Richtige Antworten, um zum nächsten Level zu gelangen. `');
         
-        alert =(' `Du brauchst mindestens 5 Richtige Antworten, um zum nächsten Level zu gelangen. `');
     }
 }
 function saveScore(score) {
