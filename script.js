@@ -20,7 +20,7 @@ function checkAnswers() {
         
     } else {
         
-        alert =( `Du brauchst mindestens 5 Richtige Antworten, um zum nächsten Level zu gelangen. `);
+        alert =(' `Du brauchst mindestens 5 Richtige Antworten, um zum nächsten Level zu gelangen. `');
     }
 }
 function saveScore(score) {
