@@ -1,11 +1,11 @@
-function checkAnswer2() {
-    correctAnswer='UFTKN'
+function checkAnswer2(correctAnswer,nextpage,downpage) {
+    
     const userAnswer = document.getElementById('answer').value;
     if (userAnswer.toLowerCase() == correctAnswer.toLowerCase()) 
         {   
         saveScore(10);
-        window.open('Peely.png', '_blank');
-        window.location.href = "Nivel3.html";
+        window.open(downpage, '_blank');
+        window.location.href = nextpage;
         } 
     else {
         alert('Falsche Antwort! Versuchen Sie es erneut!');
