@@ -66,7 +66,7 @@ window.onload = function () {
     if (!totalScore) {
         totalScore = 0;
     }
-    document.getElementById('message').textContent = "Punctaj total până acum: " + totalScore;
+    document.getElementById('message').textContent = "Die Gesamtpunktzahl: " + totalScore;
     const timerDisplay = document.getElementById('timer');
     const timeInMinutes = 5;  // Setează numărul de minute pentru timer
     const timeInSeconds = timeInMinutes * 60;
