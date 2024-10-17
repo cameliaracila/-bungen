@@ -13,13 +13,13 @@ function checkAnswers() {
 
     if (correctAnswers >= minimumCorrect) {
         message.style.color = 'green';
-        message.textContent = "Glückwunsch! Du bist zum nächsten Level gegangen.";
+        message.textContent = "Glückwunsch! Ihr seid zum nächsten Level gekommen.";
         window.open('spike.png', '_blank');
         saveScore(10);
         window.location.href = "Nivel2.html";
         
     } else {
-        alert('`Du brauchst mindestens 5 Richtige Antworten, um zum nächsten Level zu gelangen. `');
+        alert('`Ihr braucht mindestens fünf richtige Antworten, um zum nächsten Level zu gelangen. `');
         
     }
 }
